@@ -1,0 +1,12 @@
+#Ignore modules, compiled files, env's etc.
+node_modules/
+
+__pycache__/
+*.pyc
+
+.env
+
+*.log
+
+*.sqlite3
+db.sqlite3
