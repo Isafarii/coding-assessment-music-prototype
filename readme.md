@@ -1,25 +1,75 @@
-This project is a simple music control panel web app that includes several API endpoints to analyze and interact with rooms. It is a prototype and is still in the works. 
+# Music Control Panel Web App
 
-It is built using Django for back-end and React for the front-end. The project structure in the front-end consists of React and has navigation to interact with API endpoints. The back-end is built using Django and the Django REST framework. It handles room creation, listing, as well as joining. 
-In order to run the project, ensure you have Django installed and other dependencies such as Python, etc.
+This project is a simple music control panel web app that includes several API endpoints to analyze and interact with rooms. It is a prototype for a coding-assessment and is still in the works.
 
-Navigate to the project directory: 
+## Technology Stack
 
-run the command to start the server: python manage.py runserver
+- **Backend**: This is created using Django and the Django REST Framework.
+- **Frontend**: This is created using React.
 
+## Project Structure
 
-Navigate to the front-end directory: 
+- The front-end consists of React components with navigation to interact with the API endpoints.
+- The back-end handles room creation, listing, and joining.
 
-run the following command to start the front-end development server: npm run dev 
+## Installation and Setup
 
-There are three available endpoints:
+### Requirements
+Ensure you have the following:
+- Python 3.x
+- Django
+- Node.js and npm for frontend
 
-Number 1 is to create a room: /api/room
+### Running the Project
 
-Number 2 is to list rooms: /api/rooms
+1. **Navigate to project directory:**
 
-Number 3 is to join a room: /api/room/<ROOM_CODE>/join
+   ```bash
+   cd musicK
+   ```
 
-Bugs:
+2. **Start Django server:**
 
-Method not allowed; a method not allowed message will appear in the terminal if the user successfully inputs a successful existing code into endpoint 3 as it attempts to make a GET request to the endpoint. The endpoint is made to handle POST requests. For this project, this is for navigational reasons.
+   Run the following command in your terminal:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+3. **Navigate to frontend directory:**
+
+   ```bash
+   cd frontend
+   ```
+
+4. **Start frontend development server:**
+
+   Run the following command:
+
+   ```bash
+   npm run dev
+   ```
+
+## API Endpoints
+
+There are three available API endpoints:
+
+1. **Create a Room**: 
+   - URL: `/api/room`
+   - Method: `POST`
+
+2. **List Rooms**:
+   - URL: `/api/rooms`
+   - Method: `GET`
+
+3. **Join a Room**:
+   - URL: `/api/room/<ROOM_CODE>/join`
+   - Method: `POST`
+
+## Known Issues
+
+- **Method Not Allowed Warning**: A "Method Not Allowed" message will appear in the terminal if the user successfully inputs an existing code into Endpoint 3 
+
+    (`/api/room/<ROOM_CODE>/join`). 
+
+    This happens because the frontend attempts to make a GET request to an endpoint designed to handle POST requests. For this project, this is intentional for navigational purposes.
